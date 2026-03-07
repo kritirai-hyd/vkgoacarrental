@@ -1,0 +1,583 @@
+/* Footer Container */
+.footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #334155, transparent);
+}
+
+/* Cities Section */
+.citiesSection {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.citiesContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.citiesHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.citiesTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00aaff 0%, #0066cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.citiesSubtitle {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stateGroup {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stateGroup:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 170, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.stateHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stateIcon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #00aaff 0%, #0066cc 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stateName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.cityList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cityLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.cityLink:hover {
+  background: rgba(0, 170, 255, 0.1);
+  color: #00aaff;
+  border-color: rgba(0, 170, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.cityIcon {
+  color: #00aaff;
+  font-size: 1rem;
+}
+
+/* Main Footer Content */
+.footerMain {
+  padding: 5rem 1rem 3rem;
+}
+
+.footerContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+/* Company Info Section */
+.companySection {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  margin-bottom: 2rem;
+}
+
+.logo {
+transition: transform .3s;
+    background-color: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.companyDescription {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.socialLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.socialLink:hover::before {
+  left: 100%;
+}
+
+.socialLink:hover {
+  background: linear-gradient(135deg, #00aaff 0%, #0066cc 100%);
+  color: white;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 170, 255, 0.3);
+}
+
+/* Section Headers */
+.sectionHeader {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;    text-align: left;
+  color: #f8fafc;
+}
+
+.sectionHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(135deg, #00aaff 0%, #0066cc 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.footerSection:hover .sectionHeader::after {
+  width: 60px;
+}
+
+/* Links Lists */
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linkItem {
+  transition: transform 0.3s ease;
+}
+
+.linkItem:hover {
+  transform: translateX(5px);
+}
+
+.link {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.link::before {
+  content: '▸';
+  color: #00aaff;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  color: #00aaff;
+  padding-left: 0.5rem;
+}
+
+.link:hover::before {
+  transform: scale(1.2);
+}
+
+/* Contact Info */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.contactItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 170, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.contactIcon {
+  color: #00aaff;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.contactText {
+  flex: 1;
+}
+
+.contactLabel {
+  font-weight: 600;
+  color: #f8fafc;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.contactValue {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.contactLink {
+  color: #00aaff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contactLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00aaff;
+  transition: width 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #66d9ff;
+}
+
+.contactLink:hover::after {
+  width: 100%;
+}
+
+/* App Download Section */
+.appSection {
+  margin-top: 2rem;
+}
+
+.appButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.appButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 170, 255, 0.3);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.appIcon {
+  font-size: 2rem;
+}
+
+.appText {
+  display: flex;
+  flex-direction: column;
+}
+
+.appLabel {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.appName {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem 1rem;
+  border-top: 1px solid #334155;
+}
+
+.footerBottomContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.footerText {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.brandLink,
+.developerLink {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.brandLink::after,
+.developerLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00aaff;
+  transition: width 0.3s ease;
+}
+
+.brandLink:hover::after,
+.developerLink:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footerContainer {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .citiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .citiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .citiesSection {
+    padding: 3rem 1rem;
+  }
+  
+  .citiesTitle {
+    font-size: 2rem;
+  }
+
+  .footerMain {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .sectionHeader::after {
+         left: 10%;
+    transform: translateX(-50%);
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .contactItem {
+
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .appButtons {
+    align-items: center;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .stateGroup {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .citiesSection {
+    padding: 2rem 1rem;
+  }
+
+  .citiesTitle {
+    font-size: 1.75rem;
+  }
+
+  .footerMain {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .socialLink {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .appButton {
+    padding: 0.75rem 1rem;
+  }
+
+  .stateHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+/* Animation Enhancements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footerSection {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footerSection:nth-child(1) { animation-delay: 0.1s; }
+.footerSection:nth-child(2) { animation-delay: 0.2s; }
+.footerSection:nth-child(3) { animation-delay: 0.3s; }
+.footerSection:nth-child(4) { animation-delay: 0.4s; }

@@ -1,0 +1,601 @@
+/* Hero Section */
+.heroSection {
+  background:linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  padding: 3rem 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.heroText {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 3rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.breadcrumbLink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  margin: 0 0.5rem;
+  opacity: 0.7;
+}
+
+.breadcrumbCurrent {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.heroStats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.37);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(97, 97, 97, 0.281);
+}
+
+.statIcon {
+  font-size: 2rem;
+  color: rgb(11, 0, 31);
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(218, 81, 1);
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 123, 0, 0.9);
+}
+
+.heroWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: white;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+}
+
+/* Main Content Section */
+.mainContent {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Text Section */
+.textSection {
+  padding: 1rem 0;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.starIcon {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.ratingText {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.description p {
+  margin-bottom: 1.5rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.featureIcon {
+  color: #10b981;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.ctaSection {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 126, 95, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 126, 95, 0.4);
+}
+
+.secondaryButton {
+  background: white;
+  color: #2d3748;
+  border: 2px solid #e2e8f0;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  border-color: #ff7e5f;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+/* Image Section */
+.imageSection {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.responsiveImage {
+  width: 100%;
+  height: 54rem;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.imageWrapper:hover .responsiveImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.badgeIcon {
+  color: #ff7e5f;
+}
+
+/* Destinations Section */
+.destinationsSection {
+  padding: 5rem 0;
+  background: white;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeaderCenter h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.sectionHeaderCenter p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.destinationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.destinationCard {
+  background: #f8fafc;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.destinationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: #ff7e5f;
+}
+
+.destinationIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.destinationCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.destinationCard p {
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.distance {
+  color: #ff7e5f;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefitCard {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.benefitIconWrapper {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.benefitIcon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.benefitCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.benefitCard p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+/* Info Section */
+.infoSection {
+  padding: 5rem 0;
+  background: white;
+}
+
+.infoContent h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.infoText {
+  background: #f8fafc;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.infoText p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.highlightBox {
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  color: white;
+}
+
+.highlightBox h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+}
+
+.benefitsList li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.benefitsList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.bookingTip {
+  background: #e6f3ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border-left: 4px solid #667eea;
+}
+
+.bookingTip h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.conclusion {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroStats {
+    gap: 1rem;
+  }
+  
+  .statItem {
+    padding: 0.75rem 1rem;
+  }
+  
+  .ctaSection {
+    flex-direction: column;
+  }
+    .breadcrumb
+{
+  flex-direction: column;
+}
+  .destinationsGrid {
+    grid-template-columns: 1fr;
+  }
+  .responsiveImage{
+        height: 350px;
+  }
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .infoText {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+    .breadcrumb
+{
+  flex-direction: column;
+}
+  .heroStats {
+    flex-direction: column;
+    align-items: center;
+  }
+    .responsiveImage{
+        height: 350px;
+  }
+  .infoText {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,362 @@
+/* Scroll Text */
+.scrollText {
+  background:linear-gradient(135deg, #000000 0%, #313131 100%);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  height: 22px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  --gap: 2rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.scrollList {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+  animation: scroll 25s linear infinite;
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+}
+
+.scrollText:hover .scrollList {
+  animation-play-state: paused;
+}
+
+.scrollStar {
+  display: inline-block;
+  min-width: max-content;
+  padding: 0 1rem;
+  font-weight: 600;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navigation */
+.navbar {
+  /* background: rgba(255, 255, 255, 0.98); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.15rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brandLogo {
+  flex-shrink: 0;
+}
+
+.vkLogo {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.vkLogo:hover {
+  transform: scale(1.05);
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background: #2d3748;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerLine:nth-child(1) {
+  transform-origin: center;
+}
+
+.hamburgerLine:nth-child(2) {
+  transform-origin: center;
+}
+
+.hamburgerLine:nth-child(3) {
+  transform-origin: center;
+}
+
+.hamburgerLineActive:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburgerLineActive:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerLineActive:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink,
+.dropdownToggle {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #2d3748;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(135deg, #4299e1 0%, #0066cc 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+.navLink:hover,
+.dropdownToggle:hover {
+  color: #0066cc;
+  transform: translateY(-2px);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  animation: dropdownShow 0.3s ease forwards;
+}
+
+@keyframes dropdownShow {
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdownItem:hover {
+  background: linear-gradient(135deg, #ebf8ff 0%, #e6f3ff 100%);
+  color: #0066cc;
+  border-left-color: #0066cc;
+  transform: translateX(5px);
+}
+
+/* Mobile Navigation */
+.mobileNav {
+    background: #fff;
+    /* border-top: 1px solid rgba(0, 0, 0, .1); */
+    flex-direction: column;
+    display: flex
+;
+    height: 100vh;
+    margin-top: 3rem;
+
+
+}
+
+.mobileNavItem,
+.mobileDropdownToggle {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
+}
+
+.mobileNavItem:hover,
+.mobileDropdownToggle:hover {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  color: #0066cc;
+  padding-left: 2.5rem;
+}
+
+.mobileDropdown {
+  position: relative;
+}
+
+.mobileDropdownToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobileDropdownMenu {
+background: #f7f6f6;
+    border-top: 1px solid rgb(20 0 116 / 54%);
+    border-radius: 10px;
+    width: 300px;
+    justify-content: center;
+    display: flex
+;
+    flex-direction: column;
+    margin: 11px auto;
+}
+
+.mobileDropdownItem {
+font-size: 1.3rem;
+    color: #001636;
+    border-bottom: 1px solid rgb(0 21 88 / 35%);
+    padding: .95rem 3rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .3s;
+    display: block;
+}
+
+.mobileDropdownItem:hover {
+  background: white;
+  color: #0066cc;
+  padding-left: 3.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .scrollText {
+    font-size: 0.75rem;
+    height: 36px;
+  }
+
+  .vkLogo {
+    width: 150px;
+  }
+
+  .mobileNavItem,
+  .mobileDropdownToggle {
+        padding: .875rem 1.5rem;
+        font-size: 1.4rem;
+        background-color: #00468b0f;
+        margin-bottom: 1rem;
+        text-align: center;
+        border-radius: 12px;
+        width: 300px;
+        display: flex
+;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+  }
+}

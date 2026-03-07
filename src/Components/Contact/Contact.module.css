@@ -1,0 +1,522 @@
+/* Modern Header Styles */
+.modernHeader {
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  padding: 4rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.modernHeader h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.modernHeader p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.separator {
+  margin: 0 0.5rem;
+}
+
+.current {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* Modern Contact Area */
+.modernContactArea {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.modernContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.modernSectionHeading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionSubtitle {
+  display: inline-block;
+  background:linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, .424) 48%, rgba(141, 202, 255, .56) 100%);
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.modernSectionHeading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.modernSectionHeading p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contact Layout */
+.modernContactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.modernContactCol {
+  flex: 1;
+  min-width: 300px;
+}
+
+.infoCol {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formCol {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Contact Info Styles */
+.sectionIntro h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.sectionIntro p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+.modernContactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.modernContactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #000000;
+}
+
+.iconWrapper {
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, 0.719)48%, rgba(0, 101, 190, 0.829) 100%);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.contactContent h4 {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contactLink {
+  color: #718096;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  line-height: 1.6;
+}
+
+.contactLink:hover {
+  color: #000000;
+}
+
+/* Contact Features */
+.contactFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #4a5568;
+}
+
+.featureDot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, 0.719)48%, rgba(0, 101, 190, 0.829) 100%);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Modern Form Styles */
+.modernFormRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  flex: 1;
+}
+
+.textareaGroup {
+  margin-bottom: 2rem;
+}
+
+.modernInput,
+.modernTextarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.modernTextarea {
+  resize: vertical;
+  min-height: 220px;
+}
+
+.modernInput:focus,
+.modernTextarea:focus {
+  border-color: #000000;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(246, 207, 9, 0.1);
+}
+
+.modernLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #718096;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: white;
+  padding: 0 0.5rem;
+}
+
+.modernInput:focus + .modernLabel,
+.modernInput:not(:placeholder-shown) + .modernLabel,
+.modernTextarea:focus + .modernLabel,
+.modernTextarea:not(:placeholder-shown) + .modernLabel {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Modern Button */
+.modernButton {
+  background: linear-gradient(-225deg, #003079 0%, rgba(0, 68, 255, 0.719)48%, rgba(0, 101, 190, 0.829) 100%);
+  color: #fffbfb;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.modernButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(246, 207, 9, 0.3);
+}
+
+.modernButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.modernButton.loading {
+  color: transparent;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.modernButton:hover .buttonIcon {
+  transform: translateX(3px);
+}
+
+.buttonSpinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Result Message */
+.resultMessage {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  animation: slideIn 0.3s ease;
+}
+
+.resultMessage.success {
+  background: #c6f6d5;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+.resultMessage.error {
+  background: #fed7d7;
+  color: #742a2a;
+  border: 1px solid #feb2b2;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modernHeader {
+    padding: 3rem 0 5rem;
+  }
+  
+  .modernHeader h1 {
+    font-size: 2.5rem;
+  }
+  
+  .modernContactRow {
+    flex-direction: column;
+  }
+  
+  .modernFormRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .infoCol,
+  .formCol {
+    padding: 2rem;
+  }
+  
+  .modernSectionHeading h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modernContainer {
+    padding: 0 1rem;
+  }
+  
+  .infoCol,
+  .formCol {
+    padding: 1.5rem;
+  }
+  
+  .modernContactCard {
+
+    text-align: center;
+    gap: 1rem;
+  }
+}/* Additional styles for self-drive car rental contact form */
+
+/* Form note styling */
+.formNote {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Select input styling */
+.modernInput[type="date"],
+.modernInput select {
+  appearance: none;
+  background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23718096' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat calc(100% - 1rem) center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+}
+
+.modernInput select option {
+  background: white;
+  color: #2d3748;
+  padding: 0.5rem;
+}
+
+/* Enhanced contact features */
+.contactFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.featureDot {
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Small text styling */
+.contactContent small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* Enhanced responsive design for date inputs */
+@media (max-width: 768px) {
+  .modernInput[type="date"] {
+    min-height: 3rem;
+  }
+  
+  .modernFormRow {
+    flex-direction: column;
+  }
+}
+
+/* Focus states for select and date inputs */
+.modernInput:focus,
+.modernTextarea:focus,
+.modernInput select:focus {
+  border-color: #f6cf09;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(246, 207, 9, 0.1);
+}
+
+/* Placeholder styling for better UX */
+.modernInput::placeholder,
+.modernTextarea::placeholder {
+  color: transparent;
+}
+
+/* Loading state enhancements */
+.modernButton.loading {
+  position: relative;
+}
+
+/* Success message enhancements */
+.resultMessage.success {
+  background: #c6f6d5;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+  border-left: 4px solid #38a169;
+}
+
+.resultMessage.error {
+  background: #fed7d7;
+  color: #742a2a;
+  border: 1px solid #feb2b2;
+  border-left: 4px solid #e53e3e;
+}

@@ -1,0 +1,1190 @@
+/* Blog.module.css */
+
+.blogSection {
+  position: relative;
+  background:#ffff;
+  padding: 6rem 1rem;
+  overflow: hidden;
+}
+
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingShape1,
+.floatingShape2,
+.floatingShape3 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 204, 255, 0.05) 100%);
+  filter: blur(50px);
+  animation: floatShape 8s ease-in-out infinite;
+}
+
+.floatingShape1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.floatingShape2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.floatingShape3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 6s;
+}
+
+.blogContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.titleWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+      text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgb(213 213 213 / 28%);
+    border: 1px solid rgba(0, 47, 255, 0.2);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    padding: .5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex
+;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.titleGradient {
+  background: #fff;
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #ffffff 0%, #fdfdfd 100%);
+  border-radius: 2px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.titleUnderline::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  background: #2054ff;
+  border-radius: 4px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.sectionDescription {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Blog Card */
+.blogCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blogCard:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 40px 60px rgba(0, 102, 204, 0.15),
+    0 15px 35px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: linear-gradient(to right, #002b8d, #007dfe);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 3;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+/* Image Container */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.imageLink {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.blogImage {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #002b8d, #007dfe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.blogCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.1);
+}
+
+.readMore {
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover .readMore {
+  transform: translateY(0);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover .arrowIcon {
+  transform: translateX(5px);
+}
+
+/* Floating Dots */
+.floatingDot1,
+.floatingDot2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to right, #002b8d, #007dfe);
+  animation: float 4s ease-in-out infinite;
+}
+
+.floatingDot1 {
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  right: 20px;
+  animation-delay: 1s;
+}
+
+.floatingDot2 {
+  width: 8px;
+  height: 8px;
+  top: 20px;
+  right: -4px;
+  animation-delay: 2s;
+}
+
+/* Blog Content */
+.blogContent {
+  padding: 2rem;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.metaIcon {
+  color: #105cff;
+  font-size: 0.8rem;
+}
+
+.metaText {
+  font-weight: 500;
+}
+
+.blogTitle {
+  margin-bottom: 1rem;
+}
+
+.titleLink {
+  color: #1a202c;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.titleLink:hover {
+  color: #0066cc;
+}
+
+.blogExcerpt {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.readMoreButton {
+color: #fff;
+    background: #086bff;
+    border-radius: 5px;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1.5rem;
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+    display: flex
+;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+.readMoreButton:hover {
+  background: rgb(0, 65, 204);
+  transform: translateX(5px);
+}
+
+.buttonArrow {
+  transition: transform 0.3s ease;
+}
+
+.readMoreButton:hover .buttonArrow {
+  transform: translateX(3px);
+}
+
+.buttonHover {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.readMoreButton:hover .buttonHover {
+  left: 100%;
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.blogCard:hover .cardGlow {
+  opacity: 1;
+}
+
+/* View All Button */
+.buttonContainer {
+  text-align: center;
+}
+
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(to right, #002b8d, #007dfe) 0 0 / 200% 100%;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 10px 30px rgba(0, 102, 204, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.viewAllButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.viewAllButton:hover::before {
+  left: 100%;
+}
+
+.viewAllButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 20px 40px rgba(0, 102, 204, 0.4),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.viewAllArrow {
+  transition: transform 0.3s ease;
+}
+
+.viewAllButton:hover .viewAllArrow {
+  transform: translateX(5px);
+}
+
+.buttonShadow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: rgba(0, 102, 204, 0.3);
+  filter: blur(15px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.viewAllButton:hover .buttonShadow {
+  opacity: 1;
+  bottom: -15px;
+}
+
+/* Animations */
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blogGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogSection {
+    padding: 4rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .blogGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .metaInfo {
+    gap: 1rem;
+  }
+  
+  .titleLink {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .blogContent {
+    padding: 1.5rem;
+  }
+  
+  .viewAllButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .categoryBadge {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}/* components/Blog/Blog.module.css */
+
+/* Header Styles */
+.aboutHeader {
+  position: relative;
+  background: linear-gradient(to right, #002b8d, #007dfe);
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headerTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+ color: #ffffff;
+    background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+.breadcrumbLink {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color:#ffffff;
+}
+
+.breadcrumbSeparator {
+  color: #ffffff;
+}
+
+.breadcrumbCurrent {
+  color:#ffffff;
+  font-weight: 600;
+}
+
+
+/* Blog Section */
+.blogSection {
+  position: relative;
+  background: #fff;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Elements */
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingOrb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.floatingParticle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 50px;
+  left: 5%;
+  background: conic-gradient(from 45deg, #00ccff, #0066cc, #00ccff);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  animation: floatParticle 12s ease-in-out infinite;
+}
+
+.gradientBlob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 10%;
+  background: linear-gradient(135deg, #0066cc, #00aaff);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(60px);
+  opacity: 0.1;
+  animation: morphBlob 10s ease-in-out infinite;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 95, 204, 0.1);
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+width: 300px;
+justify-content: center;
+margin: 0 auto;
+  border: 1px solid rgba(204, 184, 0, 0.2);
+}
+
+.badgeIcon {
+  font-size: 0.8rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.titlePrimary {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleSecondary {
+  background: linear-gradient(-225deg, #003079 0%, rgba(1, 49, 184, 0.424) 48%, rgba(0, 39, 146, 0.56) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleDecoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionDescription {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Blog Card */
+.blogCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: cardEntrance 0.6s ease-out var(--delay) both;  background: rgba(255, 255, 255, 0.15);
+  color: #000000;border: 1px solid rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blogCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(0, 102, 204, 0.15),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.blogCard:hover .cardGlow {
+  opacity: 1;
+}
+
+/* Image Container */
+.imageContainer {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imageLink {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.blogImage {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to right, #002a8d57, #007ffe5b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.blogCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.readMoreCta {
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover .readMoreCta {
+  transform: translateY(0);
+}
+
+.ctaArrow {
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover .ctaArrow {
+  transform: translateX(5px);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background:linear-gradient(to right, #002b8d, #007dfe);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 3;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.floatingElement {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -10px;
+  right: 1rem;
+  background: #0051ff;
+  border-radius: 50%;
+  animation: floatElement 4s ease-in-out infinite;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 2rem;
+}
+
+.metaInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.metaGroup {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metaItem, .readTime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.metaIcon {
+  color: #105cff;
+  font-size: 0.8rem;
+}
+
+.blogTitle {
+  margin-bottom: 1rem;
+}
+
+.titleLink {
+  color: #1a202c;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+
+.blogExcerpt {
+  color: #0d003a;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background: rgba(0, 68, 255, 0.1);
+  color: #0044ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #0066cc;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #001c58;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(0, 81, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ctaButton:hover {
+  background: rgba(0, 102, 204, 0.2);
+  transform: translateX(5px);
+}
+
+.buttonIcon {
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonIcon {
+  transform: translateX(3px);
+}
+
+.buttonHoverEffect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.ctaButton:hover .buttonHoverEffect {
+  left: 100%;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+}
+
+
+.viewAllButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.viewAllButton:hover::before {
+  left: 100%;
+}
+
+.viewAllButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 102, 204, 0.4);
+}
+
+.buttonTrail {
+  transition: transform 0.3s ease;
+}
+
+.viewAllButton:hover .buttonTrail {
+  transform: translateX(5px);
+}
+
+.buttonBackground {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: rgba(0, 102, 204, 0.3);
+  filter: blur(15px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.viewAllButton:hover .buttonBackground {
+  opacity: 1;
+  bottom: -15px;
+}
+
+/* Animations */
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  66% {
+    transform: translateY(20px) translateX(-20px);
+  }
+}
+
+@keyframes morphBlob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatElement {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blogGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHeader {
+    padding: 4rem 1rem 3rem;
+  }
+  
+  .blogSection {
+    padding: 3rem 1rem;
+  }
+  
+  .blogGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .metaInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .metaGroup {
+    gap: 1rem;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .viewAllButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .categoryBadge {
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

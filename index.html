@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Booking Steps</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 40px;
+      color: #1f1f3e;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #1f1f3e;
+    }
+
+    p.subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 50px;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .step {
+      position: relative;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: #e6e6f0;
+      z-index: 1;
+    }
+
+    .step-icon {
+      background: #e6f5e6;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      position: relative;
+    }
+
+    .step:nth-child(2) .step-icon {
+      background: #e6f0fa;
+    }
+
+    .step:nth-child(3) .step-icon {
+      background: #fdebef;
+    }
+
+    .step:nth-child(4) .step-icon {
+      background: #fff3db;
+    }
+
+    .step-number {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #1f1f3e;
+    }
+
+    .step-title {
+      font-weight: 600;
+      font-size: 16px;
+      color: #1f1f3e;
+    }
+
+    .step svg {
+      width: 36px;
+      height: 36px;
+      stroke-width: 1.5;
+      color: #1f1f3e;
+    }
+
+    @media (max-width: 768px) {
+      .steps {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .step:not(:last-child)::after {
+        content: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>How To Book a Self-Drive Car Online</h2>
+    <p class="subtitle">Book a car online in Hyderabad from MyChoize in 4 simple steps.</p>
+
+    <div class="steps">
+      <!-- Step 1 -->
+      <div class="step">
+        <div class="step-icon">
+          <!-- Calendar & Car icon (SVG placeholder) -->
+          📅🚗
+        </div>
+        <div class="step-number">01</div>
+        <div class="step-title">Select City & Travel dates</div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="step-icon">
+          📍🚘
+        </div>
+        <div class="step-number">02</div>
+        <div class="step-title">Choose Car & Delivery Mode</div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="step-icon">
+          🧾✔️
+        </div>
+        <div class="step-number">03</div>
+        <div class="step-title">Verify Yourself</div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step">
+        <div class="step-icon">
+          💳
+        </div>
+        <div class="step-number">04</div>
+        <div class="step-title">Make Payment</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

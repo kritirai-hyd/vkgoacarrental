@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Exploring Goa in a Self Drive Car",
+    "description": "Discover the joy of freedom with self-drive car rentals in Goa and explore hidden gems at your pace.",
+    "date": "2025-07-01",
+    "username": "Punit Rai",
+    "url": "exploring-goa-in-a-self-drive-car",
+    "image": "goa-blog1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Beaches You Must Visit in Goa",
+    "description": "From Baga to Palolem, check out the most breathtaking beaches to drive to in your rental car.",
+    "date": "2025-06-25",
+    "username": "Kriti Rai",
+    "url": "top-5-beaches-goa",
+    "image": "goa-blog2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Self Drive Vs Taxi: What's Better in Goa?",
+    "description": "We break down the pros and cons of self-drive rentals vs local taxis when visiting Goa.",
+    "date": "2025-06-15",
+    "username": "Kriti Rai",
+    "url": "self-drive-vs-taxi-goa",
+    "image": "goa-blog3.png"
+  },
+  {
+    "id": 4,
+    "title": "How to Choose the Best Self Drive Car in Goa",
+    "description": "Tips for picking the right car for your Goa adventure — from compact hatchbacks to spacious SUVs.",
+    "date": "2025-06-10",
+    "username": "Aarav Mehta",
+    "url": "choose-best-self-drive-car-goa",
+    "image": "goa-blog4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "10 Offbeat Places to Visit with a Self Drive Car in Goa",
+    "description": "Escape the crowds and discover lesser-known beaches, forts, and villages in Goa with your rental car.",
+    "date": "2025-06-05",
+    "username": "Meera Sharma",
+    "url": "offbeat-places-goa-self-drive",
+    "image": "goa-car-rental.png"
+  },
+  {
+    "id": 6,
+    "title": "Self Drive Car Rental Rules You Should Know in Goa",
+    "description": "From licenses to road safety, here are the key rules and tips for driving a rental car in Goa.",
+    "date": "2025-06-01",
+    "username": "Punit Rai",
+    "url": "goa-self-drive-rules",
+    "image": "goa-blog6.jpg"
+  }
+]

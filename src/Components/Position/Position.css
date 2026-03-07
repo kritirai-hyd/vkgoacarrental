@@ -1,0 +1,75 @@
+
+.floating-contact {
+  position: fixed;
+  bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+  right: 0px;
+}
+
+.contact-item {
+    color: #fff;
+    background-color: #25d366;
+    border-radius: 8px 1px 1px 8px;
+    align-items: center;
+    padding: 13px 15px;
+    text-decoration: none;
+    transition: background-color .3s, transform .2s;
+    display: flex
+;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+}
+
+.contact-item a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.contact-item.whatsapp {
+  background-color: #25d366;
+}
+
+.contact-item.phone {
+  background-color: #0044ffc9;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .floating-contact {
+
+    bottom: 80px;
+  }
+  .navbar-container{
+        justify-content: space-between;
+  }
+.m-icon {
+    color: #0648ff;
+    font-size: 2.5rem;
+
+    }
+  .contact-item {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .contact-item i {
+    font-size: 18px;
+  }
+}

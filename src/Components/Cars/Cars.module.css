@@ -1,0 +1,586 @@
+/* Main Section */
+.section {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  padding: 5rem 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #000000 0%, #000a25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.titleHighlight::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #141414 0%, #1d4ed8 100%);
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.breadcrumbActive {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Introduction Section */
+.introSection {
+  background: white;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.introSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, #2563eb 0%, #000000 100%);
+}
+
+.introHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.introTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.introTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 2px;
+}
+
+.content {
+  max-width: none;
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  font-size: 1.125rem;
+}
+
+.paragraph {
+  margin-bottom: 2rem;
+}
+
+.featuresGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.featureCard {
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.featureBlue {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.featureBlue::before {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.featureGreen {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.featureGreen::before {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featureTitleBlue {
+  color: #1e40af;
+}
+
+.featureTitleGreen {
+  color: #166534;
+}
+
+.featureText {
+  color: #374151;
+  line-height: 1.7;
+  font-size: 1.125rem;
+}
+
+/* Car Section */
+.carSection {
+  margin-bottom: 3rem;
+}
+
+.carTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.carTitleHighlight {
+  background: linear-gradient(135deg, #070707 0%, #002488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.carGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .carGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Car Card */
+.carCard {
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  position: relative;
+}
+
+.carCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.carCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.carCard:hover::before {
+  opacity: 1;
+}
+
+.carImageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.carImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+}
+
+.carCard:hover .carImage {
+  transform: scale(1.1);
+}
+
+.offerBadge {
+    color: #FFC;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    z-index: 2;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 6px 0px 0px 6px;
+    padding: .45rem 1.2rem;
+    font-size: .875rem;
+    font-weight: 800;
+    animation: 2s infinite Cars-module__PvY9UW__pulse;
+    position: absolute;
+    top: 1.5rem;
+    right: 0px;
+    box-shadow: 0 8px 25px rgba(239, 68, 68, .4);
+}
+
+
+.automatic {
+    color: #fff;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, .4);
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
+    position: absolute;
+    right: 17px;
+    top: 17.5rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.manual {
+  background: linear-gradient(135deg, #f5130b 0%, #d90606 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(245, 27, 11, 0.4);
+      color: #fff;
+
+  
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
+    position: absolute;
+    right: 17px;
+    top: 17.5rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+/* Car Info */
+.carInfo {
+  padding: 2rem;
+}
+
+.carName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.starFilled {
+  color: #fbbf24;
+  fill: currentColor;
+  width: 18px;
+  height: 18px;
+}
+
+.starHalf {
+  color: #fbbf24;
+  fill: currentColor;
+  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+}
+
+.reviewText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.priceWrapper {
+  margin-bottom: 2rem;
+}
+
+.priceLabel {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.priceUnit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Card Buttons */
+.cardButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.detailsButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.detailsButton:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.whatsappButton {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  cursor: pointer;
+}
+
+.whatsappButton:hover {
+  background: linear-gradient(135deg, #128c7e 0%, #0d6e5f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.detailsButton:hover .buttonIcon {
+  transform: translateX(3px);
+}
+
+.whatsappButton:hover .buttonIcon {
+  transform: scale(1.1);
+}
+
+/* Car Features Grid */
+.carFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.carFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.carFeatureIcon {
+  color: #2563eb;
+  width: 24px;
+  height: 24px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .carTitle {
+    font-size: 2rem;
+  }
+  
+  .introSection {
+    padding: 2rem;
+  }
+  
+  .featureCard {
+    padding: 2rem;
+  }
+  
+  .carImageWrapper {
+    height: 200px;
+  }
+  
+  .carFeaturesGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        margin: 2rem auto;
+        background-color: rgb(0 164 251 / 7%);
+        padding: 11px;
+        border-radius: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .carTitle {
+    font-size: 1.75rem;
+  }
+  
+  .introTitle {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .carSection {
+    margin-bottom: 2rem;
+  }
+  
+  .cardButtons {
+    flex-direction: column;
+  }
+   .whatsappButton{
+    display: none;
+  }
+  .detailsButton, .whatsappButton {
+    width: 100%;
+  }
+}
